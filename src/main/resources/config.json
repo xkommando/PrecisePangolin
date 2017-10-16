@@ -1,0 +1,48 @@
+{
+  "app": {
+    "name": "Precise Pangolin",
+    "version": "1",
+    "time": "2015-11-12",
+    "encoding": "UTF-8",
+    "debug": false
+  },
+  "sbox": {
+    "name": "ASE&RSA",
+    "comment":"combination of RSA and AES",
+      "providers": ["org.bouncycastle.jce.provider.BouncyCastleProvider"],
+      "symmetric": {
+        "keySpec": "AES",
+        "cipherName": "AES/ECB/PKCS5Padding"
+      },
+      "asymmetric": {
+        "keySpec": "RSA",
+        "cipherName": "RSA/ECB/PKCS1Padding"
+      }
+    },
+  "sepc":{
+    "hash":{
+      "basic":["MD5", "SHA-1", "SHA-256", "SHA-512", "SHA3-256", "SHA3-512", "Tiger", "Whirlpool"],
+      "extended":["MD2", "MD4", "SHA224", "SHA-384", "SHA3-224", "SHA3-384",
+        "GOST", "GOST3411",
+         "RIPEMD128", "RIPEMD160", "RIPEMD256", "RIPEMD320", "RIPEMD160",
+        "Skein-256-160", "Skein-256-224", "Skein-256-256",
+          "Skein-512-160", "Skein-512-224", "Skein-512-256", "Skein-512-384", "Skein-512-512",
+          "Skein-1024-384", "Skein-1024-512", "Skein-1024-1024"]
+    },
+    "signature":{
+      "basic":["MD5withRSA", "SHA1withRSA", "SHA256withRSA", "SHA512withRSA"],
+      "extended":["MD2withRSA","MD4withRSA", "SHA224WITHRSA", "SHA384withRSA",
+      "RMD128WITHRSA", "RIPEMD160WithRSA", "RIPEMD256withRSA",
+      "WhirlpoolwithRSA/ISO9796-2", "WhirlpoolWITHRSA/X9.31"
+      ]
+    }
+  },
+  "ui":{
+    "hash":{
+      "fuzzy-compare":true,
+      "file-hash":{
+        "bgtask-size-speed":16000000
+      }
+    }
+  }
+}
